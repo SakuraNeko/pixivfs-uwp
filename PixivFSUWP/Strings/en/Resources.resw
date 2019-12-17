@@ -237,6 +237,14 @@
     <value>Downloading ugoira</value>
     <comment>PlainText</comment>
   </data>
+  <data name="DownloadPatch.Text" xml:space="preserve">
+    <value>Download Patch：</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="DownloadSetting.Text" xml:space="preserve">
+    <value>Download Setting</value>
+    <comment>TextBlock</comment>
+  </data>
   <data name="Draw.Label" xml:space="preserve">
     <value>Draw</value>
     <comment>AppBarButton</comment>
@@ -437,6 +445,10 @@
     <value>Pinned</value>
     <comment>PlainText</comment>
   </data>
+  <data name="PixivID.Text" xml:space="preserve">
+    <value>Pixiv ID：</value>
+    <comment>TextBlock</comment>
+  </data>
   <data name="PixivUserPlain" xml:space="preserve">
     <value>Pixiv user</value>
     <comment>PlainText</comment>
@@ -607,6 +619,10 @@
   </data>
   <data name="TrendingTags.Text" xml:space="preserve">
     <value>Trending tags</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="txtPictureNameSetting.Text" xml:space="preserve">
+    <value>Save as</value>
     <comment>TextBlock</comment>
   </data>
   <data name="UnknownPlain" xml:space="preserve">

@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using static PixivFSUWP.Data.OverAll;
 using Windows.Storage;
+using Windows.Storage.Pickers;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -32,7 +33,7 @@ namespace PixivFSUWP
         public SettingsPage()
         {
             this.InitializeComponent();
-            _ = loadContentsAsync();
+            _ = loadContentsAsync();    
         }
 
         private bool _backflag { get; set; } = false;
@@ -73,6 +74,7 @@ namespace PixivFSUWP
             txtName.Text = currentUser.Username;
             txtAccount.Text = "@" + currentUser.UserAccount;
             txtEmail.Text = currentUser.Email;
+            txtDownloadPatch.Text = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
             //硬编码主要开发者信息
             List<ViewModels.ContributorViewModel> mainDevs = new List<ViewModels.ContributorViewModel>();
             mainDevs.Add(new ViewModels.ContributorViewModel()
@@ -163,6 +165,24 @@ namespace PixivFSUWP
             await Data.CacheManager.ClearCacheAsync();
             await calculateCacheSize();
         }
+
+        //private void DownloadSettingRadioButton_Checked(object sender, RoutedEventArgs e)
+        //{
+        //    RadioButton rb = sender as RadioButton;
+        //    string SaveAS = rb.Tag.ToString();
+        //    if (rb != null )
+        //    {
+        //        switch ( SaveAS )
+        //        {
+        //            case "OnlyTitle":
+
+        //                break;
+        //            case "TitleAndID":
+
+        //                break;
+        //        }
+        //    }
+        //}
 
         private async void btnDelInvalid_Click(object sender, RoutedEventArgs e)
         {
